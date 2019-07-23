@@ -4,8 +4,8 @@
 }
 .container{
   position: relative;
-  width: 1300px;
-  height: 960px;
+  width: 1000px;
+  height: 600px;
   background: rgb(245,245,245);
   padding-top: 50px;
 }
@@ -109,6 +109,7 @@
 }
 .control_right > div{
   width: 40px;
+  height: 50px;
   display: inline-block;
   line-height: 50px;
   text-align: center;
@@ -117,23 +118,6 @@
 }
 .control_right > div:nth-child(1) ul{
   position: absolute;
-}
-.volume_control{
-  display: none;
-  position: relative;
-  width: 4px;
-  height: 80px;
-  background: #ccc;
-  margin: 0 auto;
-  bottom: 140px;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-}
-.control_right_volume:hover .volume_control{
-  display: block;
 }
 .volume_btn{
   position: absolute;
@@ -147,6 +131,7 @@
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+  z-index: 5;
 }
 .volume_now_progress{
   position: absolute;
@@ -159,6 +144,7 @@
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
+  z-index: 4;
 }
 .control_right_multiple > ul{
   display: none;
@@ -170,4 +156,63 @@
 }
 .control_right_multiple:hover > ul{
   display: block;
+}
+.control_right_volume{
+  position: relative;
+}
+.volume_input{
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  position: absolute;
+  left: -20px;
+  bottom: 90px;
+  z-index: 1;
+}
+/*滑轨的样式*/
+input[type=range] {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 4px;
+  background: #ccc;
+  border-radius:2px;
+  outline: none;
+  -webkit-border-radius:2p;
+  -moz-border-radius:2p;
+  -ms-border-radius:2p;
+  -o-border-radius:2p;
+  z-index: -1;
+}
+/*拖动块的样式*/
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 8px;
+  width: 8px;
+  background: #EEB422;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  z-index: 100;
+}
+.now_volume{
+  width: 4px;
+  height: 0px;
+  border-radius: 0 0 2px 2px;
+  -webkit-border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+  -ms-border-radius: 0 0 2px 2px;
+  -o-border-radius: 0 0 2px 2px;
+  position: absolute;
+  display: block;
+  bottom: 52px;
+  left: 18px;
+  background: #EEB422;  
+  z-index: 1;
+}
+.volume_control{
+  display: none;
 }
