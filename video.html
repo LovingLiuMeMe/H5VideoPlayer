@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="./static/css/video.css" rel="stylesheet" type="text/css" />
+  <link href="./static/css/iconfont.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="container">
+    <div class="video_box">
+      <div class="video_view">
+        <video id="video" width="600" height="400" ></video>
+      </div>
+      <div class="video_control">
+        <div class="control_left">
+          <div class="control_left_play">
+            <i class="iconfont icon-play"></i> 
+            <i class="iconfont icon-zanting" style="display: none"></i> 
+          </div>
+          <div class="control_left_next">
+            <i class="iconfont icon-qianjin"></i>
+          </div>
+        </div>
+        <div class="control_center">
+          <div class="move_btn">
+            <div class="time">00:00/00:00</div>
+          </div>
+          <div class="now_progress"></div>
+          <div class="all_progress"></div>
+        </div>
+        <div class="control_right">
+          <div>
+              <i class="iconfont icon-quanpingzuidahua"></i>
+          </div>
+          <div class="control_right_volume">
+              <i class="iconfont icon-yinliang"></i>
+              <div class="volume_control">
+                <div class="volume_btn">
+                </div>
+                <div class="volume_now_progress">
+                </div>
+              </div>
+          </div>
+          <div class="control_right_multiple">
+            <span>倍速</span>
+            <ul>
+              <li>2.0倍</li>
+              <li>1.5倍</li>
+              <li>0.5倍</li>
+            </ul>
+          </div>
+          <div>
+              <i class="iconfont icon-xunhuan"></i>
+          </div>
+          <div class="control_right_reload">
+              <i class="iconfont icon-shuaxin"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./static/js/video.js"></script>
+</body>
+</html>
