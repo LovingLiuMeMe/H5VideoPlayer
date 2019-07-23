@@ -78,7 +78,7 @@ moveBtnNode.onmousedown = function(e){
 
     // 获取百分比
     var change_width = allProgressNode.offsetWidth*(needLeft / maxWidth);
-
+    videoNode.currentTime = videoNode.duration * (needLeft / maxWidth ); 
     moveBtnNode.style.left = (change_width-4)+'px';
     nowProgressNode.style.width = change_width+'px';
 
@@ -88,7 +88,6 @@ moveBtnNode.onmousedown = function(e){
   }
   document.onmouseup = function(e){
     document.onmousemove = document.onmouseup = null;
-    videoNode.currentTime = videoNode.duration * (needLeft / maxWidth ); 
   }
 
 }
